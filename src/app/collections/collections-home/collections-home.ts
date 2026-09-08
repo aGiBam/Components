@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { Table } from '../table/table';
 import { Divider } from '../../shared/divider/divider';
+import { RouterOutlet } from '@angular/router';
 @Component({
-  imports: [Table, Divider],
+  imports: [Table, Divider, RouterOutlet],
   selector: 'app-collections-home',
   styleUrl: './collections-home.css',
   templateUrl: './collections-home.html',
