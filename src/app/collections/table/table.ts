@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   imports: [],
@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './table.css',
   templateUrl: './table.html',
 })
-export class Table {}
+export class Table {
+  @Input() data: any[] = [];
+  @Input() header: any[] = [];
+}

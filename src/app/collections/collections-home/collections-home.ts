@@ -7,4 +7,16 @@ import { Divider } from '../../shared/divider/divider';
   styleUrl: './collections-home.css',
   templateUrl: './collections-home.html',
 })
-export class CollectionsHome {}
+export class CollectionsHome {
+  data = [
+    { name: 'H.Kakeh', age: 27, job: 'FE Team Lead' },
+    { name: 'M.Agiba', age: 26, job: 'Mid-Level FE ' },
+    { name: 'Shouq', age: 25, job: 'Junior FE' },
+  ]
+
+  header = [
+    { key: 'name', label: 'Name' },
+    { key: 'age', label: 'Age' },
+    { key: 'job', label: 'Job' },
+  ]
+}
