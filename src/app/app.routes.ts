@@ -6,7 +6,15 @@ import { NotFound } from './not-found/not-found';
 
 export const routes: Routes = [
   { path: '', component: Home },
-  { path: 'elements', component: ElementsHome },
-  { path: 'collections', component: CollectionsHome },
-  { path: '**', component: NotFound},
+  {
+    path: 'elements',
+    loadComponent: () =>
+      import('./elements/elements-home/elements-home').then((c) => c.ElementsHome),
+  },
+  {
+    path: 'collections',
+    loadComponent: () =>
+      import('./collections/collections-home/collections-home').then((c) => c.CollectionsHome),
+  },
+  { path: '**', loadComponent: () => import('./not-found/not-found').then((c) => c.NotFound) },
 ];
