@@ -1,4 +1,4 @@
-<table class="ui table">
+<table [ngClass]="classNames" class="ui table">
   <thead>
     <tr>
       @for (header of headers; track $index) {
@@ -11,8 +11,8 @@
       <tr>
         @for (header of headers; track $index) {
           <td>{{record[header.key]}}</td>
+          <!-- <td>{{ record | json }}</td> -->
         }
-        <!-- <td>{{ record | json }}</td> -->
       </tr>
     }
   </tbody>
