@@ -9,14 +9,15 @@ import { Divider } from '../../shared/divider/divider';
 })
 export class CollectionsHome {
   data = [
-    { name: 'H.Kakeh', age: 27, job: 'FE Team Lead' },
-    { name: 'M.Agiba', age: 26, job: 'Mid-Level FE ' },
-    { name: 'Shouq', age: 25, job: 'Junior FE' },
-  ]
+    { name: 'H.Kakeh', age: 27, job: 'FE Team Lead', employed: true },
+    { name: 'M.Agiba', age: 26, job: 'Mid-Level FE ', employed: false },
+    { name: 'Shouq', age: 25, job: 'Junior FE', employed: true },
+  ];
 
   header = [
     { key: 'name', label: 'Name' },
     { key: 'age', label: 'Age' },
     { key: 'job', label: 'Job' },
-  ]
+    { key: 'employed', label: 'Has a Job?' },
+  ];
 }

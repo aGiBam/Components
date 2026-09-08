@@ -1,1 +1,19 @@
-<p>table works!</p>
+<table class="ui table">
+  <thead>
+    <tr>
+      @for (header of headers; track $index) {
+        <th>{{ header.label }}</th>
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @for (record of data; track $index) {
+      <tr>
+        @for (header of headers; track $index) {
+          <td>{{record[header.key]}}</td>
+        }
+        <!-- <td>{{ record | json }}</td> -->
+      </tr>
+    }
+  </tbody>
+</table>
