@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { ɵEmptyOutletComponent } from "@angular/router";
 
 @Component({
-  imports: [],
+  imports: [ɵEmptyOutletComponent],
   selector: 'app-segment',
   styleUrl: './segment.css',
   templateUrl: './segment.html',
