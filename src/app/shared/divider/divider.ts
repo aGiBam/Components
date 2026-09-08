@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './divider.css',
   templateUrl: './divider.html',
 })
-export class Divider {}
+export class Divider {
+  // @Input() title = '';
+}
