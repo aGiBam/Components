@@ -1,4 +1,23 @@
 <app-divider>Table Component</app-divider>
 <app-table class="stripped celled" [data]="data" [headers]="header"></app-table>
 
-<router-outlet></router-outlet>
+<app-divider>Tab Menu</app-divider>
+<div class="ui grid">
+  <div class="four wide column">
+    <div class="ui vertical fluid tabular menu">
+      <a
+        class="item"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/collections"
+      >Biography</a>
+      <a class="item" routerLinkActive="active" routerLink='companies'>Companies</a>
+      <a class="item" routerLinkActive="active" routerLink='partners'>Partners</a>
+    </div>
+  </div>
+  <div class="twelve wide stretched column">
+    <div class="ui segment">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
