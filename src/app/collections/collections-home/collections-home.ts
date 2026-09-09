@@ -9,6 +9,8 @@ import { RouterLinkActive, RouterOutlet, RouterLink } from '@angular/router';
   templateUrl: './collections-home.html',
 })
 export class CollectionsHome {
+  partOfLink = 'Some part of the link';
+
   data = [
     { name: 'H.Kakeh', age: 27, job: 'Senior FE Team Lead', employed: true },
     { name: 'M.Agiba', age: 26, job: 'Mid-Level FE ', employed: false },
