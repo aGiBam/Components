@@ -1,9 +1,7 @@
-<app-divider>Table Component</app-divider>
-<app-table class="stripped celled" [data]="data" [headers]="header"></app-table>
-
-<app-divider>Tab Menu</app-divider>
-<app-tabs>
-   <a
+<div class="ui grid">
+  <div class="four wide column">
+    <div class="ui vertical fluid tabular menu">
+      <a
         class="item"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
@@ -11,4 +9,11 @@
       >Biography</a>
       <a class="item" routerLinkActive="active" routerLink='companies'>Companies</a>
       <a class="item" routerLinkActive="active" routerLink='partners'>Partners</a>
-</app-tabs>
+    </div>
+  </div>
+  <div class="twelve wide stretched column">
+    <div class="ui segment">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
