@@ -6,6 +6,7 @@ import { NotFound } from './not-found/not-found';
 import { Biography } from './collections/biography/biography';
 import { Companies } from './collections/companies/companies';
 import { Partners } from './collections/partners/partners';
+import { ViewsHome } from './views/views-home/views-home';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -23,6 +24,10 @@ export const routes: Routes = [
       { path: 'companies', component: Companies },
       { path: 'partners', component: Partners },
     ],
+  },
+  {
+    path: 'views',
+    loadComponent: () => import('./views/views-home/views-home').then((c) => c.ViewsHome),
   },
   { path: '**', loadComponent: () => import('./not-found/not-found').then((c) => c.NotFound) },
 ];
