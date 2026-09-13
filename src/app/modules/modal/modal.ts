@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit} from '@angular/core';
 
 @Component({
   imports: [],
@@ -11,5 +11,10 @@ export class Modal implements OnInit {
 
   ngOnInit() {
    document.body.appendChild(this.el.nativeElement);
+   }
+
+   ngOnDestroy() {
+    this.el.nativeElement.remove();
+    console.log('Modal component destroyed');
    }
 }
