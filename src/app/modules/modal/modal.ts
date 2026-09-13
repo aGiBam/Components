@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit} from '@angular/core';
+import { Component, ElementRef, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   imports: [],
@@ -7,7 +7,13 @@ import { Component, ElementRef, OnInit} from '@angular/core';
   templateUrl: './modal.html',
 })
 export class Modal implements OnInit {
+  @Output() close = new EventEmitter();
   constructor(private el: ElementRef) {}
+
+  closeModal(event?: Event) {
+    event?.stopPropagation();
+    this.close.emit();
+  }
 
   ngOnInit() {
    document.body.appendChild(this.el.nativeElement);

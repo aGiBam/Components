@@ -7,4 +7,10 @@ import { Modal } from '../modal/modal';
   styleUrl: './modules-home.css',
   templateUrl: './modules-home.html',
 })
-export class ModulesHome {}
+export class ModulesHome {
+  modelOpen = false;
+
+  showModal() {
+    this.modelOpen = !this.modelOpen;
+  }
+}

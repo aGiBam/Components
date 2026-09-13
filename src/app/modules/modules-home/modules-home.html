@@ -1,2 +1,5 @@
 <app-divider>Modules Component</app-divider>
-<app-modal></app-modal>
+<button (click)="showModal()">Show Modal</button>
+@if(this.modelOpen) {
+<app-modal (close)="showModal()"></app-modal>
+}
