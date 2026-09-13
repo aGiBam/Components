@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   templateUrl: './item-list.html',
 })
 export class ItemList {
-  @Input() items: Array<{ image: string; title: string; description: string }> = []
+  @Input() items: Array<{ image: string; title: string; description: string }> = [];
 }
