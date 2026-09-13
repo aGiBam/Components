@@ -9,7 +9,6 @@ import { Partners } from './collections/partners/partners';
 import { ViewsHome } from './views/views-home/views-home';
 
 export const routes: Routes = [
-  { path: '', component: Home },
   {
     path: 'elements',
     loadComponent: () =>
@@ -29,5 +28,10 @@ export const routes: Routes = [
     path: 'views',
     loadComponent: () => import('./views/views-home/views-home').then((c) => c.ViewsHome),
   },
+  {
+    path: 'modules',
+    loadComponent: () => import('./modules/modules-home/modules-home').then((c) => c.ModulesHome),
+  },
+  { path: '', component: Home },
   { path: '**', loadComponent: () => import('./not-found/not-found').then((c) => c.NotFound) },
 ];
