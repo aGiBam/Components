@@ -1,16 +1,14 @@
 <div (click)="closeModal()" class="ui dimmer visible active">
   <div (click)="$event.stopPropagation()" class="ui modal visible active">
-    <i (click)="closeModal($event)" class="close icon"></i>
+    <i (click)="closeModal()" class="close icon"></i>
     <div class="header">
-      Modal Title
+      <ng-content select="[modalTitle]"></ng-content>
     </div>
     <div class="content">
-      <p>
-        Some contents of the modal
-      </p>
+      <ng-content></ng-content>
     </div>
     <div class="actions">
-      <div (click)="closeModal($event)" class="ui button">OK</div>
+      <ng-content select="[modalFooter]"></ng-content>
     </div>
   </div>
 </div>

@@ -3,3 +3,15 @@
 	right: 1rem;
 	color: rgba(0, 0, 0, 0.6);
 }
+
+.actions:empty {
+  display: none;
+}
+
+.actions-default {
+  display: none;
+}
+
+.actions-default:empty + .actions-default {
+  display: block;
+}

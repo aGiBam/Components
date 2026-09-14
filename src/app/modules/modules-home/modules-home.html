@@ -1,5 +1,11 @@
 <app-divider>Modules Component</app-divider>
 <button (click)="showModal()">Show Modal</button>
 @if(this.modelOpen) {
-<app-modal (close)="showModal()"></app-modal>
+<app-modal (close)="showModal()">
+  <div modalTitle>I am a REUSEABLE Title</div>
+  <p>I am a REUSEABLE modal component !!!</p>
+  <ng-container select="[modalFooter]">
+    <button class="ui button" (click)="showModal()">CLOSE ME!</button>
+  </ng-container>
+</app-modal>
 }
